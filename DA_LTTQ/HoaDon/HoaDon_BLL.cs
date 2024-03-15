@@ -28,7 +28,10 @@ namespace QLTour
         {
             return dalHoaDon.InsertHoaDon(hoadon);
         }
-
+       /* public bool Insert(tbl_HoaDon hoadon)
+        {
+            return dalHoaDon.InSert(hoadon);
+        }*/
         public DataTable ThongKe_DoanhThu_Nam(tbl_HoaDon hoadon)
         {
             return dalHoaDon.ThongKe_DoanhThu_Nam(hoadon);

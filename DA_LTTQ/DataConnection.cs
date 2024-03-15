@@ -7,7 +7,7 @@ namespace QLTour
         string conStr;
         public DataConnection()
         {
-            conStr = @"Data Source=Hy;Initial Catalog=QLTour;Integrated Security=True";
+            conStr = @"Data Source=DESKTOP-DISN8LS\KHANGSQLSERVER;Initial Catalog=QLTour;Integrated Security=True";
         }
 
         public SqlConnection getConnect()

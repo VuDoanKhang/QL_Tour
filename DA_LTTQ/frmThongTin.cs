@@ -41,7 +41,8 @@ namespace QLTour
 
         public void ShowAllDDi()
         {
-            DataTable dataTable = bllDDi.GetAllDDiTrongNc();
+            tbl_DiemDi DDI = new tbl_DiemDi();
+            DataTable dataTable = bllDDi.GetAllDDi(DDI);
             dgvDDI.DataSource = dataTable;
         }
 
@@ -596,7 +597,7 @@ namespace QLTour
             txtMaKS.Enabled = false;
         }
 
-        void LoadID()
+        /*void LoadID()
         {
             string DDL;
             if (bllDDL.GetSLDDL() < 10)
@@ -604,7 +605,7 @@ namespace QLTour
             else
                 DDL = "DDL" + bllDDL.GetSLDDL().ToString();
             txtMaDDL.Text = DDL;
-        }
+        }*/
         #endregion
 
         private void frmThongTin_Load(object sender, EventArgs e)

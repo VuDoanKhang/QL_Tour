@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,19 +60,32 @@ namespace QLTour
             HD.SoHD = lblSoHD.Text;
             if (bllHoaDon.DeleteHoaDon(HD))
             {
-             
-                this.Close();;
+
+                this.Close();
                 bllKhachHang.getMaKH_HuyTour(HD);
                 bllKhachHang.DeleteKhachHang(KhachHang);
                 MessageBox.Show("Hủy Tour thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
             else
             {
                 MessageBox.Show("Đã có lỗi xảy ra, xin thử lại sau", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             frmHoaDon frmHoaDon = new frmHoaDon();
             frmHoaDon.ShowAllHoaDon();
+        }
+
+        private void dgvThanhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*tbl_DiemDi DDI = new tbl_DiemDi();
+            DiemDi_BLL bb = new DiemDi_BLL();   
+            DDI.MaLTour = gunaComboBox1.SelectedValue.ToString();
+            DataTable dataTable = bb.GetAllDDi(DDI);
+            gunaComboBox1.DataSource = dataTable;*/
         }
     }
 }

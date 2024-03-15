@@ -38,18 +38,18 @@ namespace QLTour
             con.Close();
             return dataTable;
         }
+        public DataTable GetAllDDiNgoaiNc()
+        {
+            string sql = "SELECT * FROM dbo.DIEMDI WHERE MALTOUR = 'LT02'";
+            SqlConnection con = dataCon.getConnect();
+            sqlDA = new SqlDataAdapter(sql, con);
+            con.Open();
+            DataTable dataTable = new DataTable();
+            sqlDA.Fill(dataTable);
+            con.Close();
+            return dataTable;
+        }
 
-        //public DataTable GetAllDDiNgoaiNc()
-        //{
-        //    string sql = "SELECT * FROM dbo.DIEMDI WHERE MALTOUR = 'LT02'";
-        //    SqlConnection con = dataCon.getConnect();
-        //    sqlDA = new SqlDataAdapter(sql, con);
-        //    con.Open();
-        //    DataTable dataTable = new DataTable();
-        //    sqlDA.Fill(dataTable);
-        //    con.Close();
-        //    return dataTable;
-        //}
 
         public bool InsertDDi(tbl_DiemDi dd)
         {

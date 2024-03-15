@@ -30,5 +30,10 @@ namespace QLTour
         {
 
         }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

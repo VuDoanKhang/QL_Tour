@@ -40,9 +40,9 @@ namespace QLTour
             return dalDiemDL.DeleteDDL(ddl);
         }
 
-        public int GetSLDDL()
+       /* public int GetSLDDL()
         {
             return dalDiemDL.GetSLDDL();
-        }
+        }*/
     }
 }

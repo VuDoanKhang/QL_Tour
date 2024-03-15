@@ -826,6 +826,8 @@
                   <Style />
                 </TextRun>
               </TextRuns>
+              <ListStyle>Numbered</ListStyle>
+              <ListLevel>1</ListLevel>
               <Style>
                 <TextAlign>Center</TextAlign>
               </Style>

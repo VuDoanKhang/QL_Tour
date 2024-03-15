@@ -33,6 +33,12 @@ namespace QLTour
 
         private void btnXemCTHD_Click(object sender, EventArgs e)
         {
+           /* if (dgvHoaDon.SelectedRows.Count == 0 || dgvHoaDon.SelectedRows[0].Cells[0].Value == null || string.IsNullOrEmpty(dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString()))
+            {
+                MessageBox.Show("Vui lòng chọn một hóa đơn để xem chi tiết.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+*/
             frmXemHD XemHD = new frmXemHD();
             XemHD.lblSoHD.Text = dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString();
             XemHD.lblTenNV.Text = dgvHoaDon.SelectedRows[0].Cells[1].Value.ToString();
@@ -43,7 +49,6 @@ namespace QLTour
             XemHD.lblGiaTour.Text = string.Format("{0:#,##0}", decimal.Parse(dgvHoaDon.SelectedRows[0].Cells[6].Value.ToString())) + "đ";
             XemHD.ShowDialog();
         }
-
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             ShowAllHoaDon();
@@ -53,10 +58,18 @@ namespace QLTour
         {
             ShowAllHoaDon();
         }
-
+        public void RefreshHoaDonList()
+        {
+            ShowAllHoaDon();
+        }
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+     
+        }
 
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            ShowAllHoaDon();
         }
     }
 }

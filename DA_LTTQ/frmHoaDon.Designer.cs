@@ -96,7 +96,7 @@ namespace QLTour
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowTemplate.Height = 25;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(1168, 464);
+            this.dgvHoaDon.Size = new System.Drawing.Size(1168, 377);
             this.dgvHoaDon.TabIndex = 112;
             this.dgvHoaDon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHoaDon.ThemeStyle.AlternatingRowsStyle.Font = null;

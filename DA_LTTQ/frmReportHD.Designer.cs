@@ -35,7 +35,7 @@ namespace QLTour
             // reportHD
             // 
             this.reportHD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportHD.LocalReport.ReportEmbeddedResource = "DA_LTTQ.Report1.rdlc";
+            this.reportHD.LocalReport.ReportEmbeddedResource = "QLTour.Report1.rdlc";
             this.reportHD.Location = new System.Drawing.Point(0, 0);
             this.reportHD.Name = "reportHD";
             this.reportHD.ServerReport.BearerToken = null;

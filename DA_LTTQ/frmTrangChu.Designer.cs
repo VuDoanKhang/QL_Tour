@@ -193,6 +193,7 @@ namespace QLTour
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(370, 188);
             this.guna2Panel6.TabIndex = 6;
+            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
             // 
             // guna2Panel3
             // 

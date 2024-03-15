@@ -108,6 +108,7 @@ namespace QLTour
             this.ControlMin.ShadowDecoration.Parent = this.ControlMin;
             this.ControlMin.Size = new System.Drawing.Size(30, 30);
             this.ControlMin.TabIndex = 9;
+            this.ControlMin.Click += new System.EventHandler(this.ControlMin_Click);
             // 
             // ControlClose
             // 
@@ -122,6 +123,7 @@ namespace QLTour
             this.ControlClose.ShadowDecoration.Parent = this.ControlClose;
             this.ControlClose.Size = new System.Drawing.Size(30, 30);
             this.ControlClose.TabIndex = 8;
+            this.ControlClose.Click += new System.EventHandler(this.ControlClose_Click);
             // 
             // guna2Panel1
             // 
@@ -265,6 +267,7 @@ namespace QLTour
             this.panelChildForm.ShadowDecoration.Parent = this.panelChildForm;
             this.panelChildForm.Size = new System.Drawing.Size(1192, 785);
             this.panelChildForm.TabIndex = 2;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // ElipseFrm
             // 

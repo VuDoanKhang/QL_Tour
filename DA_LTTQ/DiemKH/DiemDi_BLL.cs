@@ -19,12 +19,10 @@ namespace QLTour
         {
             return dalDiemDi.GetAllDDi(ddi);
         }
-
-        //public DataTable GetAllDDiNgoaiNc()
-        //{
-        //    return dalDiemDi.GetAllDDiNgoaiNc();
-        //}
-
+        public DataTable GetAllDDiNgoaiNc()
+        {
+            return dalDiemDi.GetAllDDiNgoaiNc();
+        }
         public bool InsertDDi(tbl_DiemDi dd)
         {
             return dalDiemDi.InsertDDi(dd);

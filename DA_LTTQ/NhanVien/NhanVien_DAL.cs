@@ -54,7 +54,7 @@ namespace QLTour
             }
             return true;
         }
-
+        
         public bool UpdateNhanVien(tbl_NhanVien nv)
         {
             string sql = "UPDATE NHANVIEN SET TENNV = @TENNV, NGSINH = @NGSINH, SDT = @SDT, CMND_CCCD = @CMND_CCCD, NGVL = @NGVL  WHERE MANV = @MANV";

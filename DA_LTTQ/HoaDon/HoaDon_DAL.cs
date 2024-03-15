@@ -34,7 +34,8 @@ namespace QLTour
 
         public DataTable getAllHoaDon()
         {
-            string sql = "SELECT SOHD, TENNV, TENKH, NGAYLAPHOADON, THANHTIENHOADON, TOUR.TENTOUR, GIATOUR FROM HOADON, NHANVIEN, KHACHHANG, TOUR WHERE HOADON.MAKH = KHACHHANG.MAKH AND HOADON.MANV = NHANVIEN.MANV AND TOUR.MATOUR = HOADON.MATOUR";
+            string sql = "SELECT SOHD, TENNV, TENKH, NGAYLAPHOADON, THANHTIENHOADON, TOUR.TENTOUR, GIATOUR FROM HOADON, NHANVIEN, KHACHHANG, TOUR " +
+                "WHERE HOADON.MAKH = KHACHHANG.MAKH AND HOADON.MANV = NHANVIEN.MANV AND TOUR.MATOUR = HOADON.MATOUR";
             SqlConnection con = dataCon.getConnect();
             sqlDA = new SqlDataAdapter(sql, con);
             con.Open();
@@ -82,6 +83,12 @@ namespace QLTour
             return dataTable;
         }
 
+
+
+
+
+
+
         public bool DeleteHoaDon(tbl_HoaDon hoadon)
         {
             string sql = "UPDATE TOUR SET SOLUONGCONLAI = TOUR.SOLUONGCONLAI + (SELECT COUNT(THONGTINTV.MATV) FROM THONGTINTV, LOAILUATUOI, HOADON, KHACHHANG WHERE LOAILUATUOI.MALLT = THONGTINTV.MALLT AND SOHD = @SOHD  AND HOADON.MAKH = KHACHHANG.MAKH AND THONGTINTV.MAKH = KHACHHANG.MAKH) WHERE TOUR.MATOUR = (SELECT MATOUR FROM HOADON WHERE SOHD = @SOHD )" +
@@ -96,9 +103,9 @@ namespace QLTour
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return false;
+                MessageBox.Show(e.ToString());
             }
             return true;
         }

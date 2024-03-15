@@ -115,10 +115,18 @@ namespace QLTour
             cmbDiemDi.DisplayMember = "TenDDi";
             cmbDiemDi.DataSource = bllDiemDi.GetAllDDiTrongNc();
 
+           /* cmbDiemDi.ValueMember = "MaDDi";
+            cmbDiemDi.DisplayMember = "TenDDi";
+            cmbDiemDi.DataSource = bllDiemDi.GetAllDDiNgoaiNc();
+*/
             cmbDiemDen.ValueMember = "MaDDen";
             cmbDiemDen.DisplayMember = "TenDDen";
             cmbDiemDen.DataSource = bllDiemDL.GetAllDDLTrongNc();
 
+          /*  cmbDiemDen.ValueMember = "MaDDen";
+            cmbDiemDen.DisplayMember = "MaDDen";
+            cmbDiemDen.DataSource = bllDiemDL.GetAllDDLNgoaiNc();
+*/
             cmbPhuongTien.ValueMember = "MaPT";
             cmbPhuongTien.DisplayMember = "TenPT";
             cmbPhuongTien.DataSource = bllPhuongTien.GetAllPhuongTien();

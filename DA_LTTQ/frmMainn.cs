@@ -155,6 +155,21 @@ namespace QLTour
 
         }
 
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ControlMin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlClose_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //private void btnKhachHang_Click(object sender, EventArgs e)
         //{
